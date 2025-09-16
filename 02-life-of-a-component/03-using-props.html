@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using Props</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel">
+    class MyComponent extends React.Component {
+      render() {
+        return <span>My name is <em>{this.props.name}</em></span>;
+      }
+    }
+
+    ReactDOM.render(
+      <MyComponent name="Bob" />,
+      document.getElementById('app')
+    );
+  </script>
+</body>
+</html>
