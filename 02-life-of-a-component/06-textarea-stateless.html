@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Default Props</title>
+  <script src="../react/react.js"></script>
+  <script src="../react/react-dom.js"></script>
+  <script src="../react/babel.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel">
+    // Stateless version: just displays initial text and its length
+    class TextAreaCounter extends React.Component {
+      render() {
+        const text = this.props.text; // read prop
+        return (
+          <div>
+            <textarea defaultValue={text}></textarea>
+            <h3>{text.length}</h3>
+          </div>
+        );
+      }
+    }
+
+    // Default props if none provided
+    // TextAreaCounter.defaultProps = {
+      // text: "Count me as I type",
+    // };
+
+    // Render the component
+    ReactDOM.render(
+      <TextAreaCounter text="Bob" />,
+      document.getElementById("app")
+    );
+  </script>
+</body>
+</html>

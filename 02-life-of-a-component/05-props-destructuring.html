@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Default Props</title>
+  <script src="../react/react.js"></script>
+  <script src="../react/react-dom.js"></script>
+  <script src="../react/babel.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+
+      // A simple component with destructuring
+      const MyComponent = function({ name }) {
+        return <span>My name is <em>{name}</em></span>;
+      };
+
+      // Rendering the component
+      ReactDOM.render(
+        <div>
+           <div><MyComponent name="Rii" /></div>
+    <div><MyComponent name="Alex" /></div>
+    <div><MyComponent name="Sam" /></div>
+        </div>,
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>
